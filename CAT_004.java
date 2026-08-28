@@ -14,7 +14,7 @@ public class CAT_004 {
         basico = 50000;
         medio = 100000;
         premiun = 150000;
-        Scanner leer = new Scanner(        System.in);
+        Scanner leer = new Scanner(System.in);
 
         do {
                     System.out.println("╔══════════════════════════════════╗\n" + //
@@ -28,15 +28,15 @@ public class CAT_004 {
                     System.out.print("  Seleccione una opcion: ");
             opcion = leer.nextLine().toLowerCase();
             if (opcion.equals("1")) {
-                total += 50000;
+                total += basico;
                 totalItemns++;
                         System.out.println("producto basico agregado a la compra");
             } else if (opcion.equals("2")) {
-                total += 100000;
+                total += medio;
                         System.out.println("producto medio agregado a la compra");
                 totalItemns++;
             } else if (opcion.equals("3")) {
-                total += 150000;
+                total += premiun;
                         System.out.println("producto premiun agregado a la compra");
                 contadorPremiun++;
                 totalItemns++;
