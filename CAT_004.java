@@ -4,7 +4,7 @@ public class CAT_004 {
     public static void main(String[] args) {
         double DESCUENTO = 0.1;
         double IVA = 0.19;
-        int opcion;
+        String opcion;
         double porcentajeTotalPremiun;
         int basico, medio, premiun;
         double totalIva;
@@ -26,22 +26,25 @@ public class CAT_004 {
                                 "║  4. Finalizar compra             ║\n" + //
                                 "╚══════════════════════════════════╝");
                     System.out.print("  Seleccione una opcion: ");
-            opcion = leer.nextInt();
-            if (opcion == 1) {
+            opcion = leer.nextLine().toLowerCase();
+            if (opcion.equals("1")) {
                 total += 50000;
                 totalItemns++;
                         System.out.println("producto basico agregado a la compra");
-            } else if (opcion == 2) {
+            } else if (opcion.equals("2")) {
                 total += 100000;
                         System.out.println("producto medio agregado a la compra");
                 totalItemns++;
-            } else if (opcion == 3) {
+            } else if (opcion.equals("3")) {
                 total += 150000;
                         System.out.println("producto premiun agregado a la compra");
                 contadorPremiun++;
                 totalItemns++;
+            } else if (opcion.equals("4")) {
+            } else {
+                System.out.println("ingrese un numero del 1 al 4");
             }
-        } while (opcion != 4);
+        } while (!opcion.equals("4"));
         if (total > 100000) {
               total = total -(total * DESCUENTO);
              
