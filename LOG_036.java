@@ -31,8 +31,7 @@ public class LOG_036 {
             System.out.println("");
             System.out.println("  ⏳ Por favor responda con sinceridad");
             System.out.println("     ¡Su opinión nos ayuda a mejorar!");
-            opciones = leer.next().toLowerCase();
-          }  
+            opciones = leer.next().toLowerCase();  
           switch (opciones) {
                 case "1":
                     System.out.println("voto registrado gracias por tu voto");
@@ -45,3 +44,20 @@ public class LOG_036 {
                     regular++;
                     total++;
                     break;
+                case "3":
+                    System.out.println("voto registrado gracias por tu voto");
+                    malo++;
+                    total++;
+                    break;
+                case "4":
+                    System.out.println("programa finalizado, gracias por tu voto");
+                    malo++;
+                    total++;
+                    break;
+                default:
+                    System.out.println("opcion invalida. ingrese una opcion (1-2-3-4)");
+                    break;
+            }
+        } while (!opciones.equals("4"));
+    }
+}
