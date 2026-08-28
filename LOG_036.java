@@ -32,4 +32,16 @@ public class LOG_036 {
             System.out.println("  ⏳ Por favor responda con sinceridad");
             System.out.println("     ¡Su opinión nos ayuda a mejorar!");
             opciones = leer.next().toLowerCase();
-          }
+          }  
+          switch (opciones) {
+                case "1":
+                    System.out.println("voto registrado gracias por tu voto");
+                    exelente++;
+                    total++;
+                    porcentajeExelente = (exelente * 100) / total;
+                    break;
+                case "2":
+                    System.out.println("voto registrado gracias por tu voto");
+                    regular++;
+                    total++;
+                    break;
